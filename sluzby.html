@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>O mne — Tvoje Meno</title>
+  <meta name="description" content="Krátka prezentácia — O mne. Portfolio, služby, fotogaléria a kontakt." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Tvoje <strong>Meno</strong></a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Otvoriť menu">☰</button>
+
+      <nav id="mainNav" class="main-nav" aria-label="Hlavná navigácia">
+        <ul>
+          <li><a href="index.html" class="active">O mne</a></li>
+          <li><a href="sluzby.html">Služby</a></li>
+          <li><a href="praca.html">Doterajšia práca</a></li>
+          <li><a href="cennik.html">Cenník</a></li>
+          <li><a href="galeria.html">Fotogaléria</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <section class="about container">
+    <h2>Služby</h2>
+    <p>Tu môžeš napísať, čo robíš, aké služby ponúkaš a prípadne doplniť cenník.</p>
+  </section>
+</main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Tvoje Meno — Všetky práva vyhradené.</p>
+      <p class="small">Vyrobené pomocou GitHub Pages · <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // jednoduché ovládanie mobilného menu
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', ()=> {
+      mainNav.classList.toggle('open');
+    });
+
+    // aktualizovať rok vo footeri
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
